@@ -39,10 +39,6 @@ def get_coordinate_list(img):
 def fit_river(x_list, y_list):
     w = np.polyfit(x_list, y_list, 1)  # 一次多项式拟合，相当于线性拟合
     b = np.poly1d(w)
-    print(x_list)
-    print(y_list)
-    print(w)
-    print(b)
     return w, b
 
 
