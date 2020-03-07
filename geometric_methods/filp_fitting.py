@@ -85,7 +85,7 @@ if __name__ == '__main__':
     # merged_img = sub_image_filp(convert_to_binary_image(cv2.imread(img_path)))
     # x_coor_list, y_coor_list = get_coordinate_list(merged_img)
     # ang = fit_river(x_coor_list, y_coor_list)
-    img_path = 'E:/PycharmProjects/river_prediction_files/binary_uniform_images/uniform/'
+    img_path = 'E:/PycharmProjects/river_prediction_files/binary_uniform_images/binary/'
     angle_dict = {}
     count = 0
     for img in os.listdir(img_path):
@@ -95,5 +95,5 @@ if __name__ == '__main__':
         x_coor_list, y_coor_list = get_coordinate_list(merged_img)
         ang = fit_river(x_coor_list, y_coor_list)
         angle_dict[img] = ang
-    with open('uniform.json', 'w') as f:
+    with open('binary.json', 'w') as f:
         json.dump(angle_dict, f)

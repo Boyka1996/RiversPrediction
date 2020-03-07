@@ -8,6 +8,14 @@
 # Development Time       ：2020/2/24  19:51 
 # Development Tool       ：PyCharm
 
-import cv2
-img=cv2.imread('images/All_images/rivers1.png')
-print(img.shape)
+import numpy as np
+
+a = np.array([0, 1])
+print(a)
+b = np.array([0, 1])
+w = np.polyfit(a, b, 1)
+bias = np.poly1d(w)
+print(type(w))
+print(len(w))
+print(w)
+print(bias)
